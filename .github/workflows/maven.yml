@@ -33,11 +33,18 @@ jobs:
     - name: Run tests
       run: mvn clean test
 
+    - name: Wait for surefire-reports folder
+      run: |
+        while [ ! -d "target/surefire-reports" ]; do
+          echo "Waiting for surefire-reports folder..."
+          sleep 1
+        done
+
     - name: Export test results
       uses: actions/upload-artifact@v4
       with:
         name: surefire-reports
-        path: target/surefire-reports/
+        path: ./target/surefire-reports/
 
     # # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     # - name: Update dependency graph
