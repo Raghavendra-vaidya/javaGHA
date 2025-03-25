@@ -38,7 +38,7 @@ jobs:
       if: always()
       with:
         name: surefire-reports
-        path: /target/surefire-reports/
+        path: target/surefire-reports/
 
     # # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     # - name: Update dependency graph
