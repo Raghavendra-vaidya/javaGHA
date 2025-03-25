@@ -9,6 +9,7 @@ public class GetProperties {
         String value = null;
         propertiesFile = new LoadPropertiesFile();
         Properties properties = propertiesFile.loadFile(filePath);
-        return properties.getProperty(KEY);
+        value = properties.getProperty(KEY);
+        return value;
     }
 }
