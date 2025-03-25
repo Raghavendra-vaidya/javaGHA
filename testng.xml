@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CI Tests">
+    <test verbose="2" preserve-order="true" name="raghav CI tests for module 1,2">
+        <classes>
+            <class name="com.raghav.module1.Module1Test"></class>
+            <class name="com.raghav.module2.Module2Test"></class>
+        </classes>
+    </test>
+</suite>
